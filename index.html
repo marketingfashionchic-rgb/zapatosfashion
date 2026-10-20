@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CONTACTANOS</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial , sans-serif;
+    margin: 0;
+    background: #f1bbf2;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.producto {
+    background: white;
+    padding: 30px;
+    border-radius:24px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto button,
+#comprar {
+    border: none;
+    background: #198754;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.producto button:hover,
+#comprar:hover {
+    opacity: 0.85;
+}
+
+.carrito {
+    background: white;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.controles button {
+    margin: 3px;
+    cursor: pointer;
+}
+
+.total {
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#comprar {
+    width: 100%;
+    font-size: 17px;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="productos">
+
+    <div class="producto">
+        <img src="producto1.jpeg" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>190 Bs</p>
+        <button onclick="agregar('Producto 1',190)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="producto2.jpeg" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>235 Bs</p>
+        <button onclick="agregar('Producto 2',235)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="producto3.jpeg" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>250 Bs</p>
+        <button onclick="agregar('Producto 3',250)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="producto4.jpeg" alt="Producto 4">
+        <h3>Producto 4</h3>
+        <p>225 Bs</p>
+        <button onclick="agregar('Producto 4',225)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="producto5.jpeg" alt="Producto 5">
+        <h3>Producto 5</h3>
+        <p>235 Bs</p>
+        <button onclick="agregar('Producto 5',235)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <div class="producto">
+        <img src="producto6.jpeg" alt="Producto 6">
+        <h3>Producto 6</h3>
+        <p>250 Bs</p>
+        <button onclick="agregar('Producto 6',250)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="producto7.jpg" alt="Producto 7">
+        <h3>Producto 7</h3>
+        <p>245 Bs</p>
+        <button onclick="agregar('Producto 7',245)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="producto8.jpg" alt="Producto 8">
+        <h3>Producto 8</h3>
+        <p>250 Bs</p>
+        <button onclick="agregar('Producto 8',250)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto9.jpg" alt="Producto 9">
+        <h3>Producto 9</h3>
+        <p>280 Bs</p>
+        <button onclick="agregar('Producto 9',280)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto10.jpg" alt="Producto 10">
+        <h3>Producto 10</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 10',50)">
+            Agregar al carrito
+        </button>
+    </div>
+
+ <div class="producto">
+        <img src="producto11.jpg" alt="Producto 11">
+        <h3>Producto 11</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 11',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto12.jpg" alt="Producto 12">
+        <h3>Producto 12</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 12',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto13.jpg" alt="Producto 13">
+        <h3>Producto 13</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 13',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ 
+ <div class="producto">
+        <img src="producto14.jpg" alt="Producto 14">
+        <h3>Producto 14</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 14',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto15.jpg" alt="Producto 15">
+        <h3>Producto 15</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 15',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto16.jpg" alt="Producto 16">
+        <h3>Producto 16</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 16',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto17.jpg" alt="Producto 17">
+        <h3>Producto 17</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 17',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ <div class="producto">
+        <img src="producto18.jpg" alt="Producto 18">
+        <h3>Producto 18</h3>
+        <p>50 Bs</p>
+        <button onclick="agregar('Producto 18',50)">
+            Agregar al carrito
+        </button>
+    </div>
+ 
+
+</section>
+
+<section class="carrito">
+
+    <h2>🛍️ Mi carrito</h2>
+
+    <div id="lista">
+        Tu carrito está vacío.
+    </div>
+
+    <div class="total">
+        Total: <span id="total">0</span> Bs
+    </div>
+
+    <button id="comprar" onclick="enviarWhatsApp()">
+        📱 Realizar pedido por WhatsApp
+    </button>
+
+</section>
+
+<script>
+
+let carrito = [];
+
+function agregar(nombre, precio) {
+
+    let producto = carrito.find(p => p.nombre === nombre);
+
+    if(producto) {
+        producto.cantidad++;
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            cantidad: 1
+        });
+    }
+
+    mostrarCarrito();
+}
+
+function cambiarCantidad(index, cambio) {
+
+    carrito[index].cantidad += cambio;
+
+    if(carrito[index].cantidad <= 0) {
+        carrito.splice(index,1);
+    }
+
+    mostrarCarrito();
+}
+
+function eliminar(index) {
+    carrito.splice(index,1);
+    mostrarCarrito();
+}
+
+function mostrarCarrito() {
+
+    const lista = document.getElementById("lista");
+    const totalHTML = document.getElementById("total");
+
+    lista.innerHTML = "";
+
+    let total = 0;
+
+    if(carrito.length === 0) {
+        lista.innerHTML = "Tu carrito está vacío.";
+    }
+
+    carrito.forEach((producto,index) => {
+
+        let subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+
+        lista.innerHTML += `
+        <div class="item-carrito">
+
+            <div>
+                <strong>${producto.nombre}</strong><br>
+                ${producto.precio} Bs × ${producto.cantidad}
+                = ${subtotal} Bs
+            </div>
+
+            <div class="controles">
+
+                <button onclick="cambiarCantidad(${index},-1)">
+                    −
+                </button>
+
+                <button onclick="cambiarCantidad(${index},1)">
+                    +
+                </button>
+
+                <button onclick="eliminar(${index})">
+                    🗑️
+                </button>
+
+            </div>
+
+        </div>
+        `;
+    });
+
+    totalHTML.innerText = total;
+}
+
+function enviarWhatsApp() {
+
+    if(carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+    }
+
+    let mensaje = "Hola, deseo realizar el siguiente pedido:%0A%0A";
+
+    let total = 0;
+
+    carrito.forEach(producto => {
+
+        let subtotal = producto.precio * producto.cantidad;
+
+        mensaje +=
+        "• " +
+        producto.nombre +
+        " x" +
+        producto.cantidad +
+        " = " +
+        subtotal +
+        " Bs%0A";
+
+        total += subtotal;
+    });
+
+    mensaje += "%0A*TOTAL: " + total + " Bs*";
+
+    /* CAMBIA ESTE NÚMERO POR TU WHATSAPP */
+    let numero = "59171332731";
+
+    window.open(
+        "https://wa.me/" + numero + "?text=" + mensaje,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
